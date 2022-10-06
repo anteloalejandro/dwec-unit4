@@ -14,6 +14,7 @@ function caesar_encrypt(text_to_encrypt, key) {
       // Substract the difference to loop back to 'a' when the letter is greater than z
       char_num = char_num - a_to_z
     }
+    // Generate and append the generated character
     let char = String.fromCodePoint(char_num)
     encrypted_text += char
   }
