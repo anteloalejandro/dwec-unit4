@@ -12,9 +12,8 @@
   <table border="1">
     <tr>
       <script>
-        document.write('<td>' + lottery[0] + '</td>')
-        for (let i = 1; i < lottery.length; i++) {
-          document.write('<td>' + lottery[i] + '</td>')
+        for (let num of lottery) {
+          document.write('<td>' + num + '</td>')
         }
       </script>
     </tr>
