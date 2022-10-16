@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battleship</title>
+  <style>
+    body {
+      font-family: Courier, 'Courier New';
+      text-align: center;
+      display: flex;
+      flex-flow: row wrap;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .header {font-weight: bold; font-size: 1.5em;}
+    table {border-spacing: 2px;margin: auto;}
+    table td, table th {
+      border: 2px solid grey;
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+  <!--The script changes the table after it's been rendered, so it needs to be deferred-->
+  <script defer src="../js/activity10.js"></script>
+</head>
+<body>
+  <!-- Emmet shortcut to generate (most of) this table:
+    table>(tr[class="header"]>td+td{$}*10)+(tr[id="row-$"]*10>td[class="header"]+td[id="col-$"]*10)
+  -->
+  
+  <table>
+    <tr class="header">
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+    </tr>
+    <tr id="row-1">
+      <td class="header">A</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-2">
+      <td class="header">B</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-3">
+      <td class="header">C</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-4">
+      <td class="header">D</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-5">
+      <td class="header">E</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-6">
+      <td class="header">F</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-7">
+      <td class="header">G</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-8">
+      <td class="header">H</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-9">
+      <td class="header">I</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+    <tr id="row-10">
+      <td class="header">J</td>
+      <td id="col-1"></td>
+      <td id="col-2"></td>
+      <td id="col-3"></td>
+      <td id="col-4"></td>
+      <td id="col-5"></td>
+      <td id="col-6"></td>
+      <td id="col-7"></td>
+      <td id="col-8"></td>
+      <td id="col-9"></td>
+      <td id="col-10"></td>
+    </tr>
+  </table>
+</body>
+</html>
