@@ -3,7 +3,7 @@ function caesar_encrypt(text_to_encrypt, key) {
   key = parseInt(key)
   let encrypted_text = ''
   // Difference between 'z' and 'a'
-  let a_to_z = ('z'.charCodeAt(0) - 'a'.charCodeAt(0)) +1 
+  const a_to_z = ('z'.charCodeAt(0) - 'a'.charCodeAt(0)) +1 
 
   for (let i = 0; i < text_to_encrypt.length; i++) {
     let char_num = text_to_encrypt.charCodeAt(i)

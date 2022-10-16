@@ -1,14 +1,6 @@
-let students_arr = [
-  "Alejandro", "David", "Toni",
-  "Edison", "Sandra", "Isabel",
-  "Jaume", "Carlos", "Ricardo",
-  "Vicent", "Joan", "Raúl",
-  "Manel", "Juan"
-]
-
 let input = null
 let data = []
-let students = students_arr
+let students = []
 {
   let i = 0
   do {

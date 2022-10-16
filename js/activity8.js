@@ -15,17 +15,17 @@ do {
     continue
   }
   // Convert 'input' into a Number and check if its NaN.
-  //  If it is, alert the user and go to the begining of the loop.
+  //  If it is, alert the user and go to the beginning of the loop.
   input = Number(input)
   if (isNaN(input)) {
     alert('Not a number. Try again!')
     continue
   }
-  // Update 'sum' and 'count'
+  // Update 'sum' and 'count'.
   sum += input
   count++
-  // Exit if the user types 0 or if they press cancel
+  // Exit if the user types 0 or presses cancel.
 } while (input !== 0 && show_avg);
 
-// Show average if the user hasn't pressed cancel
+// Show average if the user hasn't pressed cancel.
 alert(show_avg? `Average: ${sum/count}` : 'Understandable, have a nice day' )

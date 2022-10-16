@@ -14,8 +14,7 @@ function polyalphabetic_encrypt(text_to_encrypt, key) {
     let char_num = text_to_encrypt.charCodeAt(i) + parseInt(key.charAt(key_i))
 
     // Generate and append the generated character
-    let char = String.fromCodePoint(char_num)
-    encrypted_text += char
+    encrypted_text += String.fromCodePoint(char_num)
 
     key_i++
   }
