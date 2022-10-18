@@ -16,13 +16,10 @@ function palindromes(text_in) {
 
   // Create a new variable with an empty string.
   let text_out = ''
-  {
-    let j = 0
+  // Concatenate caracters from the original string in reverse order.
+  for (let i = text_in.length - 1; i >= 0; i--)
     // Concatenate caracters from the original string in reverse order.
-    for (let i = text_in.length - 1; i >= 0; i--)
-      // Concatenate caracters from the original string in reverse order.
-      text_out += text_in[i]
-  }
+    text_out += text_in[i]
 
   return text_in == text_out
 }
