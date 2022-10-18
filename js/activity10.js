@@ -61,7 +61,6 @@ for (const s of ships) {
 
     board[coord_y][coord_x] = 1
   }
-  console.log(s)
 }
 
 
@@ -72,8 +71,6 @@ for (let i = 0; i < board.length; i++) {
     for (const cell of td) {
       if (board[i][j] == 1)
         cell.style.backgroundColor = '#000'
-      else if (board[i][j] == -1)
-        cell.style.backgroundColor = '#ccc'
     }
   }
 }
